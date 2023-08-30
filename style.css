@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' sans-serif;
+}
+#container{
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(6,100px);
+    grid-template-areas: 
+    "display display display display"
+    "clear clear delete division"
+    "seven eight nine multiplication"
+    "four five six substraction"
+    "one two three addition"
+    "zeero zeero zeero egal";
+}
+#container div{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 41px;
+ border: 1px solid black;
+}
+.division, .multiplication, .substraction, .addition, .egal{
+    background-color: orange;
+}
+.clear, .delete, .seven, .eight, .nine, .four, .five, .six, .one, .two, .three, .zeero{
+    background-color: rgb(213, 212, 178);
+}
+.dis{
+    grid-area: display;
+    background: black;
+    color: rgb(255, 0, 0);
+}
+.del{
+    grid-area: delete;
+}
+.cle{
+    grid-area: clear;
+}
+.dive{
+    grid-area: division;
+}
+.sev{
+    grid-area: seven;
+}
+.eig{
+    grid-area: eight;
+}
+.ni{
+    grid-area: nine;
+}
+.multi{
+    grid-area: multiplication;
+}
+.quatre{
+    grid-area: four;
+}
+.cinq{
+    grid-area: five;
+}
+.s6{
+    grid-area: six;
+}
+.subs{
+    grid-area: substraction;
+}
+.un{
+    grid-area: one;
+}
+.deux{
+    grid-area: two;
+}
+.trois{
+    grid-area: three;
+}
+.sum{
+    grid-area: addition;
+}
+.zeroo{
+    grid-area: zeero;
+}
+.eg{
+    grid-area: egal;
+}

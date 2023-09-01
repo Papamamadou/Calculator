@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'poppins' sans-serif;
 }
-#container{
+.container{
     display: grid;
     height: 100vh;
     justify-content: center;
@@ -18,13 +18,20 @@
     "one two three addition"
     "zeero zeero zeero egal";
 }
-#container div{
+#moveRight{
+    display: flex;
+    justify-content: right;
+}
+.container div{
  display: flex;
  justify-content: center;
  align-items: center;
  font-size: 41px;
  border: 1px solid black;
+ overflow: hidden
 }
+
+
 .division, .multiplication, .substraction, .addition, .egal{
     background-color: orange;
 }
@@ -33,9 +40,10 @@
 }
 .dis{
     grid-area: display;
-    background: black;
+    background: #1f1b1b;
     color: rgb(255, 0, 0);
 }
+
 .del{
     grid-area: delete;
 }

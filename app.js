@@ -1,11 +1,16 @@
+let firstvalue ='';
+let operation = '';
+let secondvalue = '';
 //Screen
 const display = document.querySelector('.display');
 const clear = document.querySelector('.clear');
+const deleete = document.querySelector('.delete')
 //operators
 const division = document.querySelector('.division');
 const multiplication = document.querySelector('.multiplication');
 const substraction = document.querySelector('.substraction');
 const addition = document.querySelector('.addition');
+const egal = document.querySelector('.egal');
 
 //numbers
 const seven = document.querySelector('.seven');
@@ -21,8 +26,89 @@ const zeero = document.querySelector('.zeero');
 // append met en liaison
 // addEventListener ajout levenement qu'on attend
 // querySelector nous permet de selectionner un element precis
+    // Equal button
+egal.addEventListener('click',function (event) {
+    //addition
+    if (operation === '+') {
+        secondvalue = display.innerText;
+        display.innerText = "";
+        return display.append(parseInt(firstvalue) + parseInt(secondvalue));
+        
 
 
+        // subs
+    } else if (operation === '-') {
+        secondvalue = display.innerText;
+        display.innerText = "";
+        return display.append(firstvalue - secondvalue);
+
+
+        //multiply
+    } else if (operation === '*') {
+        secondvalue = display.innerText;
+        display.innerText = "";
+        return display.append(firstvalue * secondvalue);
+
+
+        //division
+    } else if (operation === '/') {
+        secondvalue = display.innerText;
+        display.innerText = "";
+        return display.append(firstvalue / secondvalue);
+    } else {
+        return 'null'
+    }
+} )
+
+
+
+
+//Addition
+addition.addEventListener('click',function(event){
+    firstvalue = display.innerText
+    display.innerText = "";
+    console.log(firstvalue)
+    operation = event.target.innerText
+    display.innerText = "";
+})
+//substraction
+substraction.addEventListener('click', function(event){
+    firstvalue = display.innerText
+    display.innerText = "";
+    console.log(firstvalue)
+    operation = event.target.innerText
+    display.innerText = "";
+})
+//Multiplication
+multiplication.addEventListener('click',function(event){
+    firstvalue = display.innerText
+    display.innerText = "";
+    console.log(firstvalue)
+    operation = event.target.innerText
+    display.innerText = "";
+})
+//Division
+division.addEventListener('click',function(event){
+    firstvalue = display.innerText
+    display.innerText = "";
+    console.log(firstvalue)
+    operation = event.target.innerText
+    display.innerText = "";
+})
+
+
+//Button DEL
+deleete.addEventListener('click',function(event){
+    let del= display.innerText.split('')
+    del.pop()
+
+    del = del.join('')
+
+    display.innerText = del
+    console.log(del)
+})
+
+//Button CLEAR
 clear.addEventListener('click',function(event){
    display.innerText = "";
 })
@@ -69,3 +155,9 @@ zeero.addEventListener('click', function(event){
     let result0= event.target.innerHTML;
     return display.append(result0);
 } );
+
+
+
+
+
+
